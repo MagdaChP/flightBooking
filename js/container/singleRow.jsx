@@ -1,21 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export class Header extends React.Component {
+import { NewTourists } from './newTourists.jsx';
+
+export class SingleRow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+        }
     }
     render() {
         return (
-            <header> 
-                <h1>Space tourist flights management!</h1>
-                
-            </header>
+            <span>single row </span>
         )
     }
 }
 
 ReactDOM.render(
-    <Header />,
+    <SingleRow />,
     document.getElementById('app')
 );

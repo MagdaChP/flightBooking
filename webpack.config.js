@@ -8,7 +8,8 @@ module.exports = {
   devServer: {
     inline: true,
     contentBase: './',
-    port: 3001
+    port: 3001,
+    historyApiFallback: true
   },
   mode: "development",
   watch: true,
@@ -48,9 +49,6 @@ module.exports = {
         },
         'sass-loader']
     }]
-  },
-  devServer: {
-    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
