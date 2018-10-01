@@ -9,12 +9,11 @@ export class TouristList extends React.Component {
         this.state = {
             touristListEl: this.props.newTuristRow
         }
-        console.log('dgdfxgb', this.state.touristListEl)
     }
     componentWillReceiveProps(nextProps) {
         this.setState({
             touristListEl: nextProps.newTuristRow
-        }, () => { console.log('tablica w newTouristRow', this.state.touristListEl.lenght) })
+        }, () => { console.log('tablica w newTouristRow', this.state.touristListEl.length) })
     }
     render() {
         return (

@@ -9,9 +9,8 @@ export class Tourists extends React.Component {
         super(props);
         this.state = {
             showNewForm: false,
-            newRow: ['newrow']
+            newRow: [],
         }
-        // console.log('new row w tourists', newRow)
     }
     newTouristForm = () => {
         this.setState({
@@ -19,7 +18,8 @@ export class Tourists extends React.Component {
         })
     }
     addNew = (newTourist) => {
-        console.log('addNew', this.state);
+        // console.log('new tourist object',newTourist)
+        // console.log('addNew', this.state);
         this.setState({
             newRow: this.state.newRow.concat(newTourist)
         })
