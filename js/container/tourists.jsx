@@ -31,7 +31,8 @@ export class Tourists extends React.Component {
             <div>
                 {this.state.showNewForm && <NewTourists addNewMethod={this.addNew} />}
                 <button onClick={this.newTouristForm}>New</button>
-                <thead>
+                <table>
+                    <thead>
                         <tr>
                             <th>Name</th>
                             <th>Last Name</th>
@@ -42,6 +43,7 @@ export class Tourists extends React.Component {
                             <th>Notes</th>
                         </tr>
                     </thead>
+                </table>
                 <TouristList newTuristRow={this.state.newRow} />
             </div>
         )

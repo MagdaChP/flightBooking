@@ -19,7 +19,6 @@ export class SingleRow extends React.Component {
         return (
             <div>
                 <table>
-                    
                     <tbody>
                         <tr>
                             <td>{this.props.newElName}</td>
@@ -29,6 +28,8 @@ export class SingleRow extends React.Component {
                             <td>{this.props.newElBirthDate}</td>
                             <td>{this.props.newElFlight}</td>
                             <td>{this.props.newElNote}</td>
+                            <td><button>Delete</button></td>
+                            <td><button>Edit</button></td>
                         </tr>
                     </tbody>
                 </table>
