@@ -17,35 +17,17 @@ export class TouristList extends React.Component {
     }
     render() {
         return (
-            <ul>
-                <li>pierwszy</li>
-                <SingleRow />
-            </ul>
-        )
-        // <table>
-        //     <thead>
-        //         <tr>
-        //             <th>Name</th>
-        //             <th>Last Name</th>
-        //             <th>Gender</th>
-        //             <th>Country</th>
-        //             <th>Birth Date</th>
-        //             <th>Flight</th>
-        //             <th>Notes</th>
-        //         </tr>
-        //     </thead>
-        //     <tbody>
-        //         <tr>
-        //             <td>Magda</td>
-        //             <td>Chorzępa</td>
-        //         </tr>
-        //         <tr>
-        //             {this.props.newTouristRow.map((elem) => {
+            <div>
+                {this.state.touristListEl !== undefined &&
+                    this.state.touristListEl.map((e) => {
+                        console.log(e.name);
+                        console.log('map');
+                        return <SingleRow newElName={e.name} newElLastName={e.lastName} newElSex={e.sex} newElCountry={e.country} newElBirthDate={e.birthDate} newElFlight={e.flight} newElNote={e.notes}/>
 
-        //             })}
-        //         </tr>
-        //     </tbody>
-        // </table>
+                    })
+                }
+            </div>
+        )
     }
 }
 

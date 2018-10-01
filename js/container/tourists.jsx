@@ -9,7 +9,7 @@ export class Tourists extends React.Component {
         super(props);
         this.state = {
             showNewForm: false,
-            newRow: [],
+            newRow: []
         }
     }
     newTouristForm = () => {
@@ -22,13 +22,26 @@ export class Tourists extends React.Component {
         // console.log('addNew', this.state);
         this.setState({
             newRow: this.state.newRow.concat(newTourist)
+        }, () => {
+            console.log(this.state.newRow);
         })
     }
     render() {
         return (
             <div>
-                <button onClick={this.newTouristForm}>New</button>
                 {this.state.showNewForm && <NewTourists addNewMethod={this.addNew} />}
+                <button onClick={this.newTouristForm}>New</button>
+                <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Country</th>
+                            <th>Birth Date</th>
+                            <th>Flight</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
                 <TouristList newTuristRow={this.state.newRow} />
             </div>
         )
