@@ -1,6 +1,6 @@
 //Konfiguracja Webpack
 var path = require("path");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+// var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: ["./js/app.jsx", "./sass/main.scss"],
@@ -50,9 +50,9 @@ module.exports = {
         'sass-loader']
     }]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'index.html'
-    })
-  ]
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     template: 'index.html'
+  //   })
+  // ]
 }

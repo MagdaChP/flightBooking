@@ -18,8 +18,6 @@ export class Tourists extends React.Component {
         })
     }
     addNew = (newTourist) => {
-        // console.log('new tourist object',newTourist)
-        // console.log('addNew', this.state);
         this.setState({
             newRow: this.state.newRow.concat(newTourist)
         }, () => {

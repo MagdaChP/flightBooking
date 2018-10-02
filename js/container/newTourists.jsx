@@ -52,7 +52,8 @@ export class NewTourists extends React.Component {
             country: this.state.country,
             birthDate: this.state.birthDate,
             flight: this.state.flight,
-            notes: this.state.notes
+            notes: this.state.notes,
+            id: Math.round(Math.random()*10)
         }
         console.log(newTourist);
         if (typeof this.props.addNewMethod == 'function') {

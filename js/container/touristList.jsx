@@ -15,6 +15,12 @@ export class TouristList extends React.Component {
             touristListEl: nextProps.newTuristRow
         }, () => { console.log('tablica w newTouristRow', this.state.touristListEl.length) })
     }
+    // removedElements = (i) => {
+    //     const touristListEl = this.state.touristListEl.filter((elem, tourElIndex) => {
+    //         return tourElIndex !== i
+    //     })
+    //     this.setState({ touristListEl })
+    // }
     render() {
         return (
             <div>
@@ -22,8 +28,7 @@ export class TouristList extends React.Component {
                     this.state.touristListEl.map((e) => {
                         console.log(e.name);
                         console.log('map');
-                        return <SingleRow newElName={e.name} newElLastName={e.lastName} newElSex={e.sex} newElCountry={e.country} newElBirthDate={e.birthDate} newElFlight={e.flight} newElNote={e.notes}/>
-
+                        return <SingleRow removeEl={this.removedElements} elemToRemove={this.state.touristListEl} newElName={e.name} newElLastName={e.lastName} newElSex={e.sex} newElCountry={e.country} newElBirthDate={e.birthDate} newElFlight={e.flight} newElNote={e.notes} id={e.id} />
                     })
                 }
             </div>
