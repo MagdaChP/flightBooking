@@ -13,14 +13,14 @@ export class TouristList extends React.Component {
     componentWillReceiveProps(nextProps) {
         this.setState({
             touristListEl: nextProps.newTuristRow
-        }, () => { console.log('tablica w newTouristRow', this.state.touristListEl.length) })
+        }, () => { console.log('tablica w newTouristRow', this.state.touristListEl) })
     }
-    // removedElements = (i) => {
-    //     const touristListEl = this.state.touristListEl.filter((elem, tourElIndex) => {
-    //         return tourElIndex !== i
-    //     })
-    //     this.setState({ touristListEl })
-    // }
+    removedElements = (index) => {
+        const touristListEl = this.state.touristListEl.filter((elem, tourElIndex) => {
+            return tourElIndex !== index
+        })
+        this.setState({ touristListEl })
+    }
     render() {
         return (
             <div>

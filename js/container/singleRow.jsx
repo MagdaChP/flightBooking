@@ -11,24 +11,26 @@ export class SingleRow extends React.Component {
 
     }
     handleClick = (e) => {
-        this.removeMethod(e.target.id)
+        const buttonId = this.props.id;
+        console.log('handle click id', this.props.id)
+        this.removeMethod(e.target, buttonId)
     }
-    removeMethod(id) {
-        console.log('id', id)
-        // console.log('key',this.key)
-        // console.log('elemtoRemove', this.props.elemToRemove);
-        // console.log('button delete')
-        // this.props.elemToRemove.map((elem, i) => {
-        //     console.log('poj obiekt', elemToRemove[elem])
-        //     if (this.props.key === elemToRemove[elem].id){
-        //         return i;
-        //     }
-        // })
-        // // elemToRemove !== undefined && elemToRemove(i)
-        // if (typeof this.props.removeEl == 'function') {
-        //     console.log('removeEl jest funkcją');
-        //     this.props.removeEl(i);
-        // }
+    removeMethod(elem, id) {
+        console.log('id', id, elem);
+        let index
+        this.props.elemToRemove.map((e, i) => {
+            console.log(i, 'i wewn mapa')
+            if (id == e.id) {
+                index = i
+            }
+        })
+        console.log('porównane i', index);
+        // return index;
+        if (typeof this.props.removeEl == 'function') {
+            console.log('kliknięcie singleRow');
+            this.props.removeEl(index);
+        }
+
     }
     render() {
         return (
@@ -43,8 +45,9 @@ export class SingleRow extends React.Component {
                             <td>{this.props.newElBirthDate}</td>
                             <td>{this.props.newElFlight}</td>
                             <td>{this.props.newElNote}</td>
-                            <td><Button key={this.props.id} removeBtn={this.removeMethod} handleBtnClick={this.handleClick} /> </td>
-                            <td><button>Edit</button></td>
+                            {/* <td>{this.props.id}</td> */}
+                            <td><Button key={this.props.id} removeBtn={this.removeMethod} handleBtnClick={this.handleClick} btnName='delete' /> </td>
+                            <td><Button btnName='edit' /></td>
                         </tr>
                     </tbody>
                 </table>

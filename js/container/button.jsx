@@ -11,7 +11,9 @@ export class Button extends React.Component {
 
     render() {
         return (
-            <button id={this.props.key} onClick={this.props.handleBtnClick}>delete</button>
+            <div>
+            <button id={this.props.key} onClick={this.props.handleBtnClick}>{this.props.btnName}</button>
+            </div>
         )
     }
 }
