@@ -12,7 +12,7 @@ export class Button extends React.Component {
     render() {
         return (
             <div>
-            <button id={this.props.key} onClick={this.props.handleBtnClick}>{this.props.btnName}</button>
+            <button id={this.props.key} onClick={this.props.handleBtnClick} className={this.props.className}>{this.props.btnName}</button>
             </div>
         )
     }

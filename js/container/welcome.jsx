@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { Button } from './button.jsx';
+
 export class Welcome extends React.Component {
     constructor(props) {
         super(props);
@@ -13,9 +15,11 @@ export class Welcome extends React.Component {
     render() {
         return (
             <div>
-                <p> Select proper action from below.</p>
-                <button onClick={this.showTouristPortal}>Tourists</button>
-                <button>Flights</button>
+                <p className='welcomeText'> Select proper action from below:</p>
+                <div className='mainBtns'>
+                <Button handleBtnClick={this.showTouristPortal}  btnName='Tourists' className='toutistBtn'/>
+                <Button btnName='Flights' className='flightsBtn'/>
+                </div>
             </div>
 
         )

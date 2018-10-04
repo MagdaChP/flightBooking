@@ -33,7 +33,7 @@ module.exports = {
       }
     },
     {
-      test: /\.css/,
+      test: /\.scss/,
       use: ['style-loader', 'css-loader',
         {
           loader: 'postcss-loader',
@@ -48,8 +48,19 @@ module.exports = {
           }
         },
         'sass-loader']
+    },
+    {
+      test: /\.(jpg|jpeg|gif|png|csv)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          publicPath: 'images',
+          outputPath: 'images'
+        }
+      }
     }]
-  },
+  }
   // plugins: [
   //   new HtmlWebpackPlugin({
   //     template: 'index.html'

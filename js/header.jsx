@@ -8,8 +8,8 @@ export class Header extends React.Component {
     render() {
         return (
             <header> 
-                <h1>Space tourist flights management!</h1>
-                
+                <h1>discover the universe</h1>
+                <h2>~ Space tourist flights management ~</h2>
             </header>
         )
     }

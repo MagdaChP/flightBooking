@@ -1,0 +1,19 @@
+.mainBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    background: #ff6200;
+    border: 2px solid #ff4c00;
+    padding: 0.6em;
+    margin: 1em;
+    cursor: pointer;
+    &:hover{
+       color: black;
+    }
+}
