@@ -1,0 +1,12 @@
+.footer{
+    background: black;
+    padding: 1.5em 1em;
+    align-self: flex-end;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    span{
+        color: white;
+        letter-spacing: 1em;
+    }
+}

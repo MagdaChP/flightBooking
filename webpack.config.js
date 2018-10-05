@@ -1,6 +1,7 @@
 //Konfiguracja Webpack
 var path = require("path");
-// var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+const GoogleFontsPlugin = require("google-fonts-webpack-plugin")
 
 module.exports = {
   entry: ["./js/app.jsx", "./sass/main.scss"],
@@ -60,10 +61,15 @@ module.exports = {
         }
       }
     }]
-  }
+  },
   // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     template: 'index.html'
-  //   })
-  // ]
+	// 	new GoogleFontsPlugin({
+	// 		fonts: [
+	// 			{ family: "Source Sans Pro" },
+	// 			{ family: "Roboto", variants: [ "400", "700italic" ] }
+	// 		]
+	// 		/* ...options */
+  //   }),
+  //   new HtmlWebpackPlugin()
+	// ]
 }

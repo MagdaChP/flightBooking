@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 export class Footer extends React.Component {
     render() {
         return (
-            <span>Simple Application ;)</span>
+            <div className='footer'>
+                <span>Simple Application</span>
+            </div>
         )
     }
 }

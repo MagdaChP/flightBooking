@@ -1,0 +1,35 @@
+.formWrapper {
+    width: 125%;
+    padding: 2em;
+}
+
+.listWrapper {
+    width: 100%;
+    .listHeader {
+        thead {
+            width: 100%;
+            tr th {
+                background-color: $list-header;
+                padding: 1em 2em;
+                width: 10%;
+                text-align: center;
+            }
+            tbody td {
+                padding: 0.5em 1em;
+            }
+        }
+    }
+    div div .listBody{
+        tbody {
+            width: 100%;
+            tr {
+                padding: 1em 2em;
+                td {
+                    padding: 0.4em 1em;
+                    width: 9%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

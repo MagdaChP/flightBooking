@@ -1,0 +1,37 @@
+.newTourist{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .left-form{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    label {
+        padding: 0.5em;
+        width: 60%;
+        position: relative;
+        select, input, textarea {
+            margin: 0.5em;
+            border-radius: 15%;
+            overflow: hidden;
+        }
+        textarea{
+            width: 658%;
+            position: absolute;
+        }
+    }
+//     .customSelect{
+//         position: relative;
+//         width: 200px;
+//         select{
+//             display: none;
+//             cursor: pointer;
+//             .selectSelected{
+//                 background: #ff6200;
+//                 color: white;
+//             }
+//         }
+//     }
+    
+}

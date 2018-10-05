@@ -26,10 +26,10 @@ export class Tourists extends React.Component {
     }
     render() {
         return (
-            <div>
-                {this.state.showNewForm && <NewTourists addNewMethod={this.addNew} />}
+            <div className='listWrapper'>
                 <button onClick={this.newTouristForm}>New</button>
-                <table>
+                {this.state.showNewForm && <NewTourists addNewMethod={this.addNew} />}
+                <table className='listHeader'>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -39,8 +39,11 @@ export class Tourists extends React.Component {
                             <th>Birth Date</th>
                             <th>Flight</th>
                             <th>Notes</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
+
                 </table>
                 <TouristList newTuristRow={this.state.newRow} />
             </div>
